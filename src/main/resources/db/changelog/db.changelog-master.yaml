@@ -19,3 +19,11 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     unique: true
+  - changeSet:
+      id: "extend-length-of-title-field"
+      author: "byte27"
+      changes:
+        - modifyDataType:
+            tableName: "books"
+            columnName: "title"
+            newDataType: "varchar(300)"
